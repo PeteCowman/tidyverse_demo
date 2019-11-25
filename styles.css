@@ -4,3 +4,7 @@ blockquote {
   margin: 1.5em 10px;
   padding: 0.5em 1.5em;
 }
+slides > slide.title-slide {
+  background-image: url("img/tidyverse_title.jpg");
+  background-size: cover;
+}
