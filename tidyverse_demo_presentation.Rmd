@@ -1,0 +1,41 @@
+---
+title: "Entering the Tidyverse"
+author: "Peter F Cowman"
+date: "`r format(Sys.time(), '%d %B, %Y')`"
+output: 
+  ioslides_presentation:
+    incremental: false
+    css: styles.css
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## CodeR TSV
+
+### Our Joruney so far...
+
+1. Intro to Rmarkdown (Ira)
+2. Intro to Git/GitHub (Cesar)
+3. Intro to the Tidyverse (Me)
+
+
+## Slide with Bullets
+
+- Bullet 1
+- Bullet 2
+- Bullet 3
+
+## Slide with R Output
+
+```{r cars, echo = TRUE}
+summary(cars)
+```
+
+## Slide with Plot
+
+```{r pressure}
+plot(pressure)
+```
+
