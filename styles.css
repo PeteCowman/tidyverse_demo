@@ -5,6 +5,9 @@ blockquote {
   padding: 0.5em 1.5em;
 }
 slides > slide.title-slide {
-  background-image: url("img/tidyverse_title.jpg");
+  background-image: url("img/tidyverse_title.png");
   background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: 900px 453px;
 }
