@@ -64,6 +64,18 @@ tidyverse_packages()
 ```{r cars, echo = TRUE}
 cars %>% filter(speed >= 10)
 ```
+## Pipe (%>%) Operator {.build}
+
+- Reduces the  amoung of code you write
+- More reable
+- Can pipe directly into a plot
+
+```{r, echo = TRUE, fig.height= 3}
+cars %>% filter(speed >= 10) %>% 
+  ggplot() + geom_point(aes(x = speed, y = dist))
+
+```
+
 
 ```{r pressure}
 plot(pressure)
