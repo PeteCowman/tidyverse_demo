@@ -152,16 +152,46 @@ as_tibble(iris) %>% filter(Species == "setosa", Sepal.Length >= 5)
 ```
 
 
-## Wrangling Data {.build}
+## Wrangling Data {.build}{.smaller}
 
 ### select() & rename()
 
 When only want certain columns and you want to rename them
 
-```{r}
-
+```{r, echo=TRUE}
+iris %>% as_tibble() %>% select(Species, contains("Length"))
 ```
 
+## Wrangling Data {.build}{.smaller}
+
+### select() & rename()
+
+When only want certain columns and you want to rename them
+
+```{r, echo=TRUE}
+iris %>% as_tibble() %>% select(Flower = Species, contains("Length"))
+```
+
+## Wrangling Data {.build}{.smaller}
+
+### select() & rename()
+
+When only want certain columns and you want to rename them
+
+```{r, echo=TRUE}
+iris %>% as_tibble() %>% rename(Flower = Species)
+```
+
+## Wrangling Data {.build}{.smaller}
+
+### select() & rename()
+
+When only want certain columns and you want to rename them
+
+```{r, echo=TRUE}
+iris %>% as_tibble() %>% rename(Flower = Species) %>% select(Flower, everything())
+
+```
 
 ## Wrangling Data {.build}
 
