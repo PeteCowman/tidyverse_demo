@@ -48,7 +48,7 @@ Website: https://www.tidyverse.org
 
 ## What is the Tidyverse? {.build}
 
-- An opionated list of other useful packages
+- An opionated list of useful packages
 - __One package to rule them all!!__
 - R packages for preparing, wrangling and visualizing data
 - Often refered to as the "Hadleyverse"
@@ -88,6 +88,18 @@ cars %>% filter(speed >= 10) %>%
 
 ```
 
+## Reading Data
+
+### readr
+
+<font size="3">The goal of readr is to provide a fast and friendly way to read rectangular data (like csv, tsv, and fwf). It is designed to flexibly parse many types of data found in the wild, while still cleanly failing when data unexpectedly changes
+
+### readxl
+
+<font size="3">The readxl package makes it easy to get data out of Excel and into R.
+
+
+![](img/readr.png){width=300px}
 
 ## Reading Data {.build}
 
