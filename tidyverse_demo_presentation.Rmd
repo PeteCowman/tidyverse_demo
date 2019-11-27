@@ -34,6 +34,18 @@ knitr::opts_chunk$set(echo = FALSE)
 - How do you use it?
 - Give it a go!
 
+## Now Entering the Tidyverse
+Website: https://www.tidyverse.org
+
+### Cheat Sheet
+
+![](img/Tidyverse_Cheat_Sheet.png){width=400px}
+
+#### More Cheat sheets: 
+
+- Rstudio -> Help -> Cheatsheets -> Browse Cheatsheets
+- https://rstudio.com/resources/cheatsheets/
+
 ## What is the Tidyverse? {.build}
 
 - An opionated list of other useful packages
@@ -77,7 +89,41 @@ cars %>% filter(speed >= 10) %>%
 ```
 
 
+## Reading Data {.build}
+
+### Tibble
 ```{r pressure}
 plot(pressure)
 ```
+
+## Wrangling Data {.build}
+
+### filter()
+
+## Wrangling Data {.build}
+
+### select() & rename()
+
+
+## Wrangling Data {.build}
+
+### group_by() & summarise()
+
+
+## Wrangling Data {.build}
+
+### mutate() & case_when()
+
+
+## Tidyr: the long and the wide of it
+
+### __Make Data Tidy Again__
+The goal of tidyr is to help you create tidy data. 
+
+Tidy data is data where:
+
+- Every column is variable.
+- Every row is an observation.
+- Every cell is a single value.
+
 
