@@ -53,7 +53,9 @@ Website: https://www.tidyverse.org
 - R packages for preparing, wrangling and visualizing data
 - Often refered to as the "Hadleyverse"
 
-![](img/hadley-wickham.png)
+![](img/hadley-wickham.png){height=200px} ![](img/ggplot2_hex.png){height=200px} ![](img/RStudio-Logo-Flat.png){height=150px} 
+
+
 
 ## Load the tidyverse
 
@@ -164,6 +166,14 @@ When only want certain columns and you want to rename them
 ## Wrangling Data {.build}
 
 ### group_by() & summarise()
+Great for when you have different group that you want to summarise
+
+```{r, echo TRUE}
+iris %>% 
+  group_by(Species) %>% 
+  summarise(n = n(), mean.sepal.length = mean(Sepal.Length))
+
+```
 
 
 ## Wrangling Data {.build}
