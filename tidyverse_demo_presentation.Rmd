@@ -19,6 +19,7 @@ knitr::opts_chunk$set(echo = FALSE)
 1. Intro to Rmarkdown (Ira)
 2. Intro to Git/GitHub (Cesar)
 3. Intro to the Tidyverse (Me)
+4. How about a Recap/Hack Session? (Dec 9th)
 
 
 ## Slide with Bullets

@@ -11,3 +11,9 @@ slides > slide.title-slide {
   background-position: center top;
   background-size: 900px 453px;
 }
+slides > slide:not(.title-slide) {
+   background-image: url("img/codeRtsvHEX.png");
+   background-size: 15%;
+   background-repeat: no-repeat;
+   background-position: 96% 3%;
+ }
