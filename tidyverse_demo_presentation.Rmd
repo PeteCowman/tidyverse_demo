@@ -88,25 +88,56 @@ cars %>% filter(speed >= 10) %>%
 
 ```
 
+
+
 ## Reading Data
 
 ### readr
 
-<font size="3">The goal of readr is to provide a fast and friendly way to read rectangular data (like csv, tsv, and fwf). It is designed to flexibly parse many types of data found in the wild, while still cleanly failing when data unexpectedly changes
+The goal of readr is to provide a fast and friendly way to read rectangular data (like csv, tsv, and fwf). It is designed to flexibly parse many types of data found in the wild, while still cleanly failing when data unexpectedly changes
 
 ### readxl
 
-<font size="3">The readxl package makes it easy to get data out of Excel and into R.
-
+The readxl package makes it easy to get data out of Excel and into R.
 
 ![](img/readr.png){width=300px}
 
-## Reading Data {.build}
+## readr {.smaller}
 
-### Tibble
-```{r pressure}
-plot(pressure)
+```{r, echo = TRUE}
+read_csv(readr_example("mtcars.csv"))
 ```
+
+## readxls {.smaller}
+
+```{r, echo = TRUE}
+library(readxl)
+read_excel(readxl_example("datasets.xlsx"))
+```
+
+
+
+## The Tibble {.smaller}
+
+### What is a "Tibble"{.smaller}
+>A tibble, or tbl_df, is a modern reimagining of the data.frame, keeping what time has proven to be effective, and throwing out what is not. Tibbles are data.frames that are lazy and surly: they do less (i.e. they don’t change variable names or types, and don’t do partial matching) and complain more (e.g. when a variable does not exist). This forces you to confront problems earlier, typically leading to cleaner, more expressive code. Tibbles also have an enhanced print() method which makes them easier to use with large datasets containing complex objects.
+
+## The Tibble {.smaller}
+
+### What is a "Tibble"{.smaller}
+```{r, echo = TRUE}
+library(tibble)
+as_tibble(iris)
+```
+
+## The Tibble {.smaller}
+
+### Glimpse a tibble{.smaller}
+```{r, echo = TRUE}
+library(tibble)
+as_tibble(iris) %>% glimpse()
+```
+
 
 ## Wrangling Data {.build}
 
