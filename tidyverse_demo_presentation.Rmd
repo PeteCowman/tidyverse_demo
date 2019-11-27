@@ -166,6 +166,7 @@ When only want certain columns and you want to rename them
 ## Wrangling Data {.build}
 
 ### group_by() & summarise()
+
 Great for when you have different group that you want to summarise
 
 ```{r, echo = TRUE}
@@ -175,6 +176,17 @@ iris %>%
 
 ```
 
+## Wrangling Data {.smaller}
+
+### group_by() & summarise()
+Great for when you have different group that you want to summarise
+
+```{r, echo = TRUE}
+iris %>% 
+  group_by(Species) %>% 
+  summarise_all(list(mean = mean))
+
+```
 
 ## Wrangling Data {.build}
 
