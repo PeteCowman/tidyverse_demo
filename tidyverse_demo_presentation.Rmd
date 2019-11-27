@@ -119,14 +119,14 @@ read_excel(readxl_example("datasets.xlsx"))
 
 
 
-## The Tibble {.smaller}
+## The Tibble {.build .smaller}
 
-### What is a "Tibble"{.smaller}
+### What is a "Tibble"
 >A tibble, or tbl_df, is a modern reimagining of the data.frame, keeping what time has proven to be effective, and throwing out what is not. Tibbles are data.frames that are lazy and surly: they do less (i.e. they don’t change variable names or types, and don’t do partial matching) and complain more (e.g. when a variable does not exist). This forces you to confront problems earlier, typically leading to cleaner, more expressive code. Tibbles also have an enhanced print() method which makes them easier to use with large datasets containing complex objects.
 
 ## The Tibble {.smaller}
 
-### What is a "Tibble"{.smaller}
+### What is a "Tibble"
 ```{r, echo = TRUE}
 library(tibble)
 as_tibble(iris)
@@ -152,7 +152,7 @@ as_tibble(iris) %>% filter(Species == "setosa", Sepal.Length >= 5)
 ```
 
 
-## Wrangling Data {.build}{.smaller}
+## Wrangling Data {.build .smaller}
 
 ### select() & rename()
 
@@ -162,7 +162,7 @@ When only want certain columns and you want to rename them
 iris %>% as_tibble() %>% select(Species, contains("Length"))
 ```
 
-## Wrangling Data {.build}{.smaller}
+## Wrangling Data {.build .smaller}
 
 ### select() & rename()
 
@@ -172,7 +172,7 @@ When only want certain columns and you want to rename them
 iris %>% as_tibble() %>% select(Flower = Species, contains("Length"))
 ```
 
-## Wrangling Data {.build}{.smaller}
+## Wrangling Data {.build .smaller}
 
 ### select() & rename()
 
@@ -262,15 +262,18 @@ starwars %>%
 ```
 
 
-## Tidyr: the long and the wide of it
+## Tidyr: Make Data Tidy Again!! {.build .smaller}
 
-### __Make Data Tidy Again__
-The goal of tidyr is to help you create tidy data. 
+__The goal of tidyr is to help you create tidy data__
 
 Tidy data is data where:
 
 - Every column is variable.
 - Every row is an observation.
 - Every cell is a single value.
+
+
+## Tidyr: the long and the wide of it
+
 
 
