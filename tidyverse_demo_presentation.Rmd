@@ -262,7 +262,7 @@ starwars %>%
 ```
 
 
-## Tidyr: Make Data Tidy Again!! {.build .smaller}
+## Tidyr: Make Data Tidy Again!!
 
 __The goal of tidyr is to help you create tidy data__
 
@@ -272,8 +272,57 @@ Tidy data is data where:
 - Every row is an observation.
 - Every cell is a single value.
 
+![](img/tidyr.png){width=200px}
 
-## Tidyr: the long and the wide of it
+## Tidyr: the long and the wide of it {.build .smaller}
+
+### Gather or Spread your data {.smaller}
+
+The old way
+
+- gather(): make data.frame longer
+- spread(): make data.frame wider
+
+As of tidyr v1.0
+
+- pivot_longer(): make data.frame longer
+- pivot_wider(): make data.frame wider
+
+## Tidyr: the long and the wide of it {.build .smaller}
+
+### Gather or Spread your data {.smaller}
+
+```{r, echo = TRUE}
+ relig_income
+```
+
+## Make Data Longer {.smaller}
+taken from vignette("pivot")
+
+```{r, echo = TRUE}
+relig_income %>% 
+  pivot_longer(-religion, names_to = "income", values_to = "count")
+```
 
 
+## Make Data wider {.smaller}
+taken from vignette("pivot")
 
+```{r, echo = TRUE}
+fish_encounters
+```
+
+## Make Data wider {.smaller}
+taken from vignette("pivot")
+
+```{r, echo = TRUE}
+fish_encounters %>% pivot_wider(names_from = station, values_from = seen)
+```
+
+## Make Data wider {.smaller}
+taken from vignette("pivot")
+
+```{r, echo = TRUE}
+fish_encounters %>% pivot_wider(names_from = station, values_from = seen, 
+                                values_fill = list(seen = 0))
+```
