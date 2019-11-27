@@ -150,10 +150,15 @@ as_tibble(iris) %>% filter(Species == "setosa", Sepal.Length >= 5)
 ```
 
 
-
 ## Wrangling Data {.build}
 
 ### select() & rename()
+
+When only want certain columns and you want to rename them
+
+```{r}
+
+```
 
 
 ## Wrangling Data {.build}
