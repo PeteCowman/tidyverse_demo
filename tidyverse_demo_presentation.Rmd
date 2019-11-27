@@ -162,7 +162,7 @@ When only want certain columns and you want to rename them
 iris %>% as_tibble() %>% select(Species, contains("Length"))
 ```
 
-## Wrangling Data {.build .smaller}
+## Wrangling Data {.smaller}
 
 ### select() & rename()
 
@@ -172,7 +172,7 @@ When only want certain columns and you want to rename them
 iris %>% as_tibble() %>% select(Flower = Species, contains("Length"))
 ```
 
-## Wrangling Data {.build .smaller}
+## Wrangling Data {.smaller}
 
 ### select() & rename()
 
@@ -182,7 +182,7 @@ When only want certain columns and you want to rename them
 iris %>% as_tibble() %>% rename(Flower = Species)
 ```
 
-## Wrangling Data {.build}{.smaller}
+## Wrangling Data {.smaller}
 
 ### select() & rename()
 
@@ -223,24 +223,23 @@ iris %>%
 ### mutate(), transmute(), case_when()
 mutate() for when you want to make a new variable, or modify exisiting variable
 
-```{r}
+```{r, echo = TRUE}
 mtcars %>% as_tibble() %>% mutate(
   cyl2 = cyl * 2,
   cyl4 = cyl2 * 2
 )
 ```
 
-## Wrangling Data  {.build .smaller}
+## Wrangling Data  {.smaller}
 
 ### mutate(), transmute(), case_when()
 transmute() to create new variable and kepe only that variable
 
-```{r}
+```{r, echo = TRUE}
 iris %>% as_tibble() %>% transmute(log.Petal.length = log(Petal.Length))
-                                     
 ```
 
-## Wrangling Data {.build .smaller}
+## Wrangling Data {.smaller}
 
 ### mutate(), transmute(), case_when()
 case_when()  - use with mutate() like "ifelse"
@@ -249,7 +248,7 @@ case_when()  - use with mutate() like "ifelse"
 starwars %>% as_tibble()
 ```
 
-## Wrangling Data {.build .smaller}
+## Wrangling Data {.smaller}
 
 ### mutate(), transmute(), case_when()
 case_when()  - use with mutate() like "ifelse"
@@ -274,7 +273,7 @@ Tidy data is data where:
 
 ![](img/tidyr.png){width=200px}
 
-## Tidyr: the long and the wide of it {.build .smaller}
+## Tidyr: the long and the wide of it {.smaller}
 
 ### Gather or Spread your data {.smaller}
 
@@ -288,7 +287,7 @@ As of tidyr v1.0
 - pivot_longer(): make data.frame longer
 - pivot_wider(): make data.frame wider
 
-## Tidyr: the long and the wide of it {.build .smaller}
+## Tidyr: the long and the wide of it {.smaller}
 
 ### Gather or Spread your data {.smaller}
 
@@ -326,3 +325,4 @@ taken from vignette("pivot")
 fish_encounters %>% pivot_wider(names_from = station, values_from = seen, 
                                 values_fill = list(seen = 0))
 ```
+
