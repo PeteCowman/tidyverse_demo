@@ -13,7 +13,7 @@ slides > slide.title-slide {
 }
 slides > slide:not(.title-slide) {
    background-image: url("img/codeRtsvHEX.png");
-   background-size: 15%;
+   background-size: 12%;
    background-repeat: no-repeat;
    background-position: 96% 3%;
  }

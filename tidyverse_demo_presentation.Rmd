@@ -138,10 +138,18 @@ library(tibble)
 as_tibble(iris) %>% glimpse()
 ```
 
-
-## Wrangling Data {.build}
+## Wrangling Data {.smaller}
 
 ### filter()
+
+Easily filter your data
+
+```{r, echo = TRUE}
+as_tibble(iris) %>% filter(Species == "setosa", Sepal.Length >= 5)
+
+```
+
+
 
 ## Wrangling Data {.build}
 
