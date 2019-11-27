@@ -168,7 +168,7 @@ When only want certain columns and you want to rename them
 ### group_by() & summarise()
 Great for when you have different group that you want to summarise
 
-```{r, echo TRUE}
+```{r, echo = TRUE}
 iris %>% 
   group_by(Species) %>% 
   summarise(n = n(), mean.sepal.length = mean(Sepal.Length))
