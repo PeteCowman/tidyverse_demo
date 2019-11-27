@@ -218,9 +218,48 @@ iris %>%
 
 ```
 
-## Wrangling Data {.build}
+## Wrangling Data {.build .smaller}
 
-### mutate() & case_when()
+### mutate(), transmute(), case_when()
+mutate() for when you want to make a new variable, or modify exisiting variable
+
+```{r}
+mtcars %>% as_tibble() %>% mutate(
+  cyl2 = cyl * 2,
+  cyl4 = cyl2 * 2
+)
+```
+
+## Wrangling Data  {.build .smaller}
+
+### mutate(), transmute(), case_when()
+transmute() to create new variable and kepe only that variable
+
+```{r}
+iris %>% as_tibble() %>% transmute(log.Petal.length = log(Petal.Length))
+                                     
+```
+
+## Wrangling Data {.build .smaller}
+
+### mutate(), transmute(), case_when()
+case_when()  - use with mutate() like "ifelse"
+
+```{r, echo = TRUE}
+starwars %>% as_tibble()
+```
+
+## Wrangling Data {.build .smaller}
+
+### mutate(), transmute(), case_when()
+case_when()  - use with mutate() like "ifelse"
+
+```{r, echo = TRUE}
+starwars %>%
+  select(name:mass, gender, species) %>%
+  mutate(type = case_when(height > 200 | mass > 200 ~ "large",
+      species == "Droid" ~ "robot",TRUE ~  "other"))
+```
 
 
 ## Tidyr: the long and the wide of it
