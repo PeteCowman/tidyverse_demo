@@ -21,20 +21,49 @@ knitr::opts_chunk$set(echo = FALSE)
 3. Intro to the Tidyverse (Me)
 4. How about a Recap/Hack Session? (Dec 9th)
 
+### Our Resources
+- GitHub Orgnaisation
+- Slack Group
+- Hex Stick!!
+- What else do we want?
 
-## Slide with Bullets
 
-- Bullet 1
-- Bullet 2
-- Bullet 3
+## Now Entering the Tidyverse
 
-## Slide with R Output
+- What is the "tidyverse"
+- How do you use it?
+- Give it a go!
 
-```{r cars, echo = TRUE}
-summary(cars)
+## What is the Tidyverse? {.build}
+
+- An opionated list of other useful packages
+- __One package to rule them all!!__
+- R packages for preparing, wrangling and visualizing data
+- Often refered to as the "Hadleyverse"
+
+![](img/hadley-wickham.png)
+
+## Load the tidyverse
+
+```{r, echo = TRUE}
+
+library(tidyverse)
 ```
 
-## Slide with Plot
+## Load the tidyverse
+
+```{r, echo = TRUE}
+tidyverse_packages()
+```
+
+## Pipe (%>%) Operator {.build}
+
+- The "%>%" is the "Pipe" operator
+- Forward a value, or the result of an expression, into the next function call/expression
+
+```{r cars, echo = TRUE}
+cars %>% filter(speed >= 10)
+```
 
 ```{r pressure}
 plot(pressure)
