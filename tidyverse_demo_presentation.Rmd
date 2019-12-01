@@ -326,3 +326,9 @@ fish_encounters %>% pivot_wider(names_from = station, values_from = seen,
                                 values_fill = list(seen = 0))
 ```
 
+## Joining Data sets {.smaller}
+full_join, left_join, right_join....
+
+```{r, echo = TRUE}
+
+```
