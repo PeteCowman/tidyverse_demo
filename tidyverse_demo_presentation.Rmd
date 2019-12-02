@@ -14,7 +14,7 @@ knitr::opts_chunk$set(echo = FALSE)
 
 ## CodeR TSV
 
-### Our Joruney so far...
+### Our Journey so far...
 
 1. Intro to Rmarkdown (Ira)
 2. Intro to Git/GitHub (Cesar)
@@ -22,7 +22,7 @@ knitr::opts_chunk$set(echo = FALSE)
 4. How about a Recap/Hack Session? (Dec 9th)
 
 ### Our Resources
-- GitHub Orgnaisation
+- GitHub Organisation
 - Slack Group
 - Hex Stick!!
 - What else do we want?
@@ -48,10 +48,10 @@ Website: https://www.tidyverse.org
 
 ## What is the Tidyverse? {.build}
 
-- An opionated list of useful packages
+- An opinionated list of useful packages
 - __One package to rule them all!!__
 - R packages for preparing, wrangling and visualizing data
-- Often refered to as the "Hadleyverse"
+- Often referred to as the "Hadleyverse"
 
 ![](img/hadley-wickham.png){height=200px} ![](img/ggplot2_hex.png){height=200px} ![](img/RStudio-Logo-Flat.png){height=150px} 
 
@@ -80,8 +80,8 @@ cars %>% filter(speed >= 10)
 ```
 ## Pipe (%>%) Operator {.build}
 
-- Reduces the  amoung of code you write
-- More reable
+- Reduces the amount of code you write
+- More readable
 - Can pipe directly into a plot
 
 ```{r, echo = TRUE, fig.height= 3}
@@ -221,7 +221,7 @@ iris %>%
 ## Wrangling Data {.build .smaller}
 
 ### mutate(), transmute(), case_when()
-mutate() for when you want to make a new variable, or modify exisiting variable
+mutate() for when you want to make a new variable, or modify existing variable
 
 ```{r, echo = TRUE}
 mtcars %>% as_tibble() %>% mutate(
@@ -233,7 +233,7 @@ mtcars %>% as_tibble() %>% mutate(
 ## Wrangling Data  {.smaller}
 
 ### mutate(), transmute(), case_when()
-transmute() to create new variable and kepe only that variable
+transmute() to create new variable and keep only that variable
 
 ```{r, echo = TRUE}
 iris %>% as_tibble() %>% transmute(log.Petal.length = log(Petal.Length))
