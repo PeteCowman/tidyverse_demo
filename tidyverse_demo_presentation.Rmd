@@ -326,9 +326,92 @@ fish_encounters %>% pivot_wider(names_from = station, values_from = seen,
                                 values_fill = list(seen = 0))
 ```
 
-## Joining Data sets {.smaller}
-full_join, left_join, right_join....
+## Joining tbls {.smaller}
+
+### inner_join, left_join, right_join, full_join
+
 
 ```{r, echo = TRUE}
-
+band_members
+band_instruments
 ```
+
+## Joining tbls {.smaller}
+
+### inner_join, left_join, right_join, full_join
+inner_join
+
+>return all rows from x where there are matching values in y, and all columns from x and y
+
+```{r, echo = TRUE}
+band_members %>% inner_join(band_instruments)
+```
+
+## Joining tbls {.smaller}
+
+### inner_join, left_join, right_join, full_join
+left_join
+
+>return all rows from x, and all columns from x and y. Rows in x with no match in y will have NA values in the new columns
+
+```{r, echo = TRUE}
+band_members %>% left_join(band_instruments)
+```
+
+## Joining tbls {.smaller}
+
+### inner_join, left_join, right_join, full_join
+right_join
+
+>return all rows from y, and all columns from x and y. Rows in y with no match in x will have NA values in the new columns
+
+```{r, echo = TRUE}
+band_members %>% right_join(band_instruments)
+```
+
+## Joining tbls {.smaller}
+
+### inner_join, left_join, right_join, full_join
+full_join
+
+>return all rows and all columns from both x and y. Where there are not matching values, returns NA for the one missing.
+
+```{r, echo = TRUE}
+band_members %>% full_join(band_instruments)
+```
+
+
+## Filter Joining tbls {.smaller}
+
+### semi_join, anti_join
+
+__semi_join__ : return all rows from x where there are matching values in y, keeping just columns from x. A semi join differs from an inner join because an inner join will return one row of x for each matching row of y, where a semi join will never duplicate rows of x
+
+```{r, echo = TRUE}
+band_members %>% semi_join(band_instruments)
+```
+
+
+## Filter Joining tbls {.smaller}
+
+### semi_join, anti_join
+
+__anti_join__ : return all rows from x where there are not matching values in y, keeping just columns from x.
+
+
+```{r, echo = TRUE}
+band_members %>% anti_join(band_instruments)
+```
+
+
+
+## Tidyverse - You can never leave.....
+
+### This is just a taste of the verse, there are other packages and more will likely be added in the future
+
+
+![](img/tidyverse_title.png){width=600px}
+
+
+
+
